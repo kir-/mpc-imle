@@ -1,8 +1,14 @@
-# Implicit Maximum Likelihood Estimation for Model Predictive Control &nbsp;&nbsp;
+# Implicit Maximum Likelihood Estimation for Real-time Generative Model Predictive Control
 
-Training and visualizing of Implicit Maximum Likelihood Estimation for Model Predictive Control.
+[[Project page]](https://gmpc-imle.github.io/)
+[[Paper]](https://arxiv.org/pdf/2603.13733)
+[[ArXiv]](https://arxiv.org/abs/2603.13733)
 
-The [main branch](https://github.com/kir-/mpc-imle/tree/main) contains code for training imle models and planning via value-function guided sampling on the D4RL locomotion and Maze2D environments.
+Official Github for **_Implicit Maximum Likelihood Estimation for Real-time Generative Model Predictive Control_** by Grayson Lee, Minh Bui, Shuzi Zhou, Yankai Li, Mo Chen, Ke Li.
+
+We present a generative modeling framework based on Implicit Maximum Likelihood Estimation for real-time trajectory generation, aiming not only to fit a fixed dataset but to efficiently produce diverse, high-quality trajectories suitable for closed-loop control at >10 Hz.
+
+![image](images/robot.png)
 
 ## Installation
 
@@ -13,7 +19,7 @@ pip install -e .
 ```
 
 ## Making Local Env File
-Copy `.env.local` to make a `.env`. This file will be used to set specify your device such as cuda or cpu. It is also used for configurations for weights and biases.
+Copy `.env.local` to make a `.env`. This file is used to specify your device such as cuda or cpu. It is also used for configurations for weights and biases.
 
 ## Using pretrained weights
 [TODO]
@@ -61,4 +67,5 @@ python scripts/time.py --backend torch  --model imle  --dataset walker2d-medium-
 ## Acknowledgements
 
 The diffusion model implementation is based on Phil Wang's [denoising-diffusion-pytorch](https://github.com/lucidrains/denoising-diffusion-pytorch) repo.
-The organization of this repo and remote diffuser is based on the [diffuser](https://github.com/jannerm/diffuser) repo.
+
+The organization of this repo is based on the [diffuser](https://github.com/jannerm/diffuser) repo.
