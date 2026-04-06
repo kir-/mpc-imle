@@ -24,8 +24,32 @@ pip install -e .
 Copy `.env.local` to make a `.env`. This file is used to specify your device such as cuda or cpu. It is also used for configurations for weights and biases.
 
 ## Using pretrained weights
-[TODO]
+Download pretrained imle models and value functions here: [[pretrained weights]](https://drive.google.com/file/d/1Tn5OiNJXpEqgy3CLvk7S0XJP9G6JMtFN/view?usp=sharing)
 
+Place the `logs` directory at the root of the project.
+
+```
+└── logs
+    ├── ${environment_1}
+    │   ├── imle
+    │   │   └── ${experiment_name}
+    │   │       ├── state_${epoch}.pt
+    │   │       ├── sample-${epoch}-*.png
+    │   │       └── {dataset, imle, model, render, trainer}_config.pkl
+    │   ├── values
+    │   │   └── ${experiment_name}
+    │   │       ├── state_${epoch}.pt
+    │   │       └── {dataset, imle, model, render, trainer}_config.pkl
+    │   └── plans
+    │       └── defaults
+    │           ├── 0
+    │           ├── 1
+    │           ├── ...
+    │           └── 149
+    │
+    ├── ${environment_2}
+    │   └── ...
+```
 ## Training from scratch
 
 1. Train a model with:
