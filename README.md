@@ -1,5 +1,7 @@
 # Implicit Maximum Likelihood Estimation for Real-time Generative Model Predictive Control
 
+*Accepted to IEEE ICRA 2026*
+
 [[Project page]](https://gmpc-imle.github.io/)
 [[Paper]](https://arxiv.org/pdf/2603.13733)
 [[ArXiv]](https://arxiv.org/abs/2603.13733)
